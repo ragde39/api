@@ -1,0 +1,48 @@
+.accesorios {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  margin-top: 30px;
+}
+.Achildren1 {
+  display: block;
+  align-content: center;
+  width: 33%;
+  text-align: center;
+  height: auto;
+  border: 3px white solid;
+}
+.Achildren2 {
+  display: block;
+  width: 34%;
+  text-align: center;
+  height: auto;
+  border: 3px white solid;
+}
+
+.Achildren3 {
+  display: block;
+  width: 33%;
+  text-align: center;
+  height: auto;
+  border: 4px white solid;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1); /* Convierte el blanco en negro */
+}
+@media only screen and (max-width: 480px) {
+  .Achildren1,
+  .Achildren2,
+  .Achildren3 {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 290px) {
+  .Achildren1,
+  .Achildren2,
+  .Achildren3 {
+    font-size: 0.6rem;
+  }
+}

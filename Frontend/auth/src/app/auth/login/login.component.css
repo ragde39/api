@@ -1,0 +1,5 @@
+@media only screen and (max-width: 300px) {
+  h2 {
+    font-size: 0.8rem;
+  }
+}

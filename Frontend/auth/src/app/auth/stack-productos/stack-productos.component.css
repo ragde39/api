@@ -1,0 +1,101 @@
+h1 {
+  padding-left: 2rem;
+}
+.listProducts {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  background: linear-gradient(
+    to right,
+    rgba(8, 232, 75, 0.5),
+    rgba(103, 68, 184, 0.5)
+  );
+  border: 1px solid black;
+  align-items: center;
+}
+
+.listProducts,
+strong {
+  font-size: 1rem;
+}
+legend {
+  color: white;
+  text-align: center;
+}
+
+.admminischildren1,
+.butonProducts,
+button {
+  padding-left: 1rem;
+  border-radius: 8px;
+}
+
+.butonProducts {
+  background-color: rgb(63, 63, 67);
+  color: blanchedalmond;
+  cursor: pointer;
+}
+.addproduct {
+  display: block; /* Cambia a block para comportamiento normal */
+  background-color: black;
+  padding: 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  max-width: 60%; /* Ancho máximo */
+  margin: 0 auto;
+  justify-items: center; /* Centrado */
+}
+
+.addproduct form {
+  display: flex;
+  flex-direction: column; /* Elementos en columna */
+  gap: 15px;
+  /* Espacio entre elementos */
+}
+
+.addproduct label {
+  color: white;
+  display: block; /* Asegura que el label ocupe toda la línea */
+  margin-bottom: 5px;
+  text-align: center; /* Espacio debajo del label */
+}
+
+.addproduct input {
+  display: flex;
+
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+}
+button {
+  margin-top: 2rem;
+}
+.product-field {
+  padding-right: 8px; /* Espacio interno a la derecha */
+  border-right: 2px solid rgb(12, 13, 14);
+}
+.product-field:last-child {
+  border-right: none;
+}
+@media screen and (max-width: 304px) {
+  .listProducts {
+    display: flex;
+
+    /*  */
+    width: 100%;
+  }
+
+  .listProducts,
+  strong {
+    display: flex;
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 739px) {
+  .addproduct {
+    max-width: 90%;
+  }
+  legend {
+    font-size: 0.8rem;
+  }
+}

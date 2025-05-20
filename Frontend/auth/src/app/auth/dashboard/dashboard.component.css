@@ -1,0 +1,15 @@
+.dasboard {
+  display: block;
+  height: auto;
+  width: clamp(200px, 100vw, 1300px);
+  /* clamp(valor_mínimo, valor_preferido, valor_máximo) */
+
+  background-color: rgb(170, 121, 215);
+  font-size: clamp(1rem, 5vw, 3rem);
+  justify-items: center;
+}
+
+img {
+  border-radius: 10px;
+  width: clamp(200px, 100vw, 1300px);
+}

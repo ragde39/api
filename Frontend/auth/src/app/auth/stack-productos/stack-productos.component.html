@@ -1,0 +1,105 @@
+<h1>Bienvenido</h1>
+<div class="adminis">
+  <div class="admminischildren1">
+    <button (click)="listProducts()" class="butonProducts">
+      {{ showProducts ? "Ocultar Productos" : "Mostrar Productos" }}
+    </button>
+
+    <div *ngIf="showProducts">
+      <ng-container>
+        <ul>
+          <li
+            *ngFor="let product of products; let i = index"
+            class="listProducts"
+          >
+            <div class="list">
+              Ítem {{ i + 1 }}:
+              <span class="product-field"
+                ><strong>Nombre: </strong> {{ product.name }}</span
+              >
+              <span class="product-field">
+                <strong>Precio: </strong>
+                {{ product.price | currency : "COP" : "symbol" : "1.0-0" }}
+              </span>
+              <span class="product-field">
+                <strong>Presentación: </strong> {{ product.presentation }}
+              </span>
+              <span class="product-field">
+                <strong>Stock: </strong> {{ product.number }}</span
+              >
+            </div>
+
+            <button (click)="deleteProduct(product._id)" class="butonProducts">
+              Eliminar Producto
+            </button>
+          </li>
+        </ul>
+      </ng-container>
+    </div>
+
+    <!-- Mensaje cuando no hay productos -->
+    <div *ngIf="products && products.length === 0">
+      No hay productos disponibles.
+    </div>
+  </div>
+  <div class="admminischildren2">
+    <form [formGroup]="saveProduct" (ngSubmit)="onSubmit3()" class="addproduct">
+      <fieldset>
+        <legend>Incripcion de Productos</legend>
+        <label for="Name">Nombre del Producto</label>
+        <!--ngClass se ytiliza para dar estilos  basado en condiciones-->
+        <input
+          type="text"
+          id="name"
+          formControlName="name"
+          [ngClass]="{
+            'is-invalid':
+              saveProduct.get('name')?.invalid &&
+              saveProduct.get('name')?.touched
+          }"
+        />
+        <label for="price">Precio</label>
+        <input
+          type="number"
+          id="price"
+          formControlName="price"
+          [ngClass]="{
+            'is-invalid':
+              saveProduct.get('price')?.invalid &&
+              saveProduct.get('price')?.touched
+          }"
+        />
+        <label for="presentation">Presentacion</label>
+        <input
+          type="text"
+          formControlName="presentation"
+          [ngClass]="{
+            'is-invalid':
+              saveProduct.get('presentation')?.invalid &&
+              saveProduct.get('presentation')?.touched
+          }"
+        />
+        <label id="number">Stock</label>
+        <input
+          type="number"
+          formControlName="number"
+          [ngClass]="{
+            'is-invalid':
+              saveProduct.get('number')?.invalid &&
+              saveProduct.get('number')?.touched
+          }"
+        />
+      </fieldset>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="saveProduct.invalid"
+      >
+        Guardar
+      </button>
+    </form>
+    <div *ngIf="showSuccess" class="alert alert-success">
+      {{ successMessage }}
+    </div>
+  </div>
+</div>

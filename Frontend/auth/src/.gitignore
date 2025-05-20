@@ -1,0 +1,48 @@
+# ==============================
+# Entorno de Node.js (backend)
+# ==============================
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnpm-debug.log
+.env
+.env.local
+.DS_Store
+dist/
+build/
+coverage/
+*.tmp
+*.log
+
+# ==============================
+# MongoDB (base de datos y cache)
+# ==============================
+/data/
+/db/
+*.ns
+*.0
+*.mongod
+.idea/
+
+# ==============================
+# Angular (frontend)
+# ==============================
+/.angular/
+/cache/
+.temp/
+*.js.map
+*.css.map
+*.spec.ts
+/browser/
+/server/
+
+# ==============================
+# Configuraciones de IDEs
+# ==============================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

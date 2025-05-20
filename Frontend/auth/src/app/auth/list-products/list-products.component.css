@@ -1,0 +1,48 @@
+.listProductsFather {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.listProducts {
+  margin: 10px;
+  width: 10rem;
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 931px) {
+  .listProducts {
+    width: 13rem;
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 831px) {
+  .listProducts {
+    width: 10rem;
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 664px) {
+  .listProducts {
+    width: 8rem;
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 519px) {
+  .listProducts {
+    width: 6rem;
+    font-size: 0.5rem;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .listProducts {
+    margin-top: 0;
+    width: 6rem;
+    height: 160px;
+    font-size: 0.5rem;
+  }
+  .listProductsFather {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+  }
+}

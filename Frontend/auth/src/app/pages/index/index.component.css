@@ -1,0 +1,5 @@
+@media only screen and (max-width: 512px) {
+  .carousel {
+    margin-top: 40px;
+  }
+}

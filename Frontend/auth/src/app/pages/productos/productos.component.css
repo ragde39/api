@@ -1,0 +1,51 @@
+.primary {
+  display: flex;
+  background-color: azure;
+  max-width: 1700px;
+  height: auto;
+  margin-top: 40px;
+}
+
+.primaryhijoa {
+  display: flex;
+  justify-content: center;
+  width: 35%;
+}
+
+.primaryhijob {
+  width: 65%;
+  height: auto;
+}
+
+.contacto {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  max-width: 1700px;
+  height: auto;
+  margin-top: 40px;
+}
+.ContactChildren1 {
+  text-align: center;
+  width: 35%;
+  height: auto;
+}
+.ContactChildren2 {
+  width: 65%;
+  height: auto;
+}
+
+@media only screen and (max-width: 490px) {
+  .primary {
+    height: 160px;
+  }
+  .primaryhijoa {
+    height: 160px;
+  }
+
+  .primaryhijob {
+    height: 160px;
+  }
+  img {
+    height: 160px;
+  }
+}
